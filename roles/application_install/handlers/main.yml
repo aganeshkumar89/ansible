@@ -1,0 +1,10 @@
+---
+# handlers file for application_server
+- name: configure database
+  mysql_db:
+    name: MYSQL_DATABASE_NAME
+    login_user: root
+    login_password: mysqladmin
+    state: present
+  register: mysql_database_result
+- debug: msg="{{ copy_result }}"

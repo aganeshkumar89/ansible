@@ -1,0 +1,14 @@
+---
+# check the status of jboss service
+- name: Check the JBOSS {{ DP_NAME }} status
+  service:
+    name: "{{ DP_NAME }}"
+    state: started
+  when: copy_result.changed
+- name: Check the PKG {{ ACR_PKG_NAME }} in Server
+  yum:
+    list: "{{ ACR_PKG_NAME }}"
+  register: pkg_list_result
+   
+
+

@@ -1,0 +1,11 @@
+---
+#copy files
+- name: copy pkg file
+  copy:
+    src: "{{ SRC_PKG_FILE_NAME }}"
+    dest: "{{ DEST_PKG_PATH }}"
+    mode: '0777'
+    backup: yes
+  register: copy_result
+- debug: msg="{{ copy_result }}"
+  when: copy_result is defined

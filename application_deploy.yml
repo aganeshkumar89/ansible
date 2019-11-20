@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.56.101
+  pre_tasks:
+    - name: Install packages required for ansible mysql modules on Ubuntu before 16.04
+      yum: 
+        name: MySQL-python 
+        state: present
+  tasks:
+  - include_role:
+      name: application_install

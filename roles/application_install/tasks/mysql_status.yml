@@ -1,0 +1,7 @@
+#Check the status of MYSQL DATABASE
+- name: check MySQL Server Status
+  service:
+    name: rda.mysql_mgmd
+    state: started
+  when: copy_result.changed
+- debug: msg="{{ copy_result }}"

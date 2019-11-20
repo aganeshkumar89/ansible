@@ -1,0 +1,6 @@
+# Remove/Uninstall pkg
+- name: Remove/Uninstall {{ ACR_PKG_NAME }} from {{ DP_NAME }} deployment profile
+  yum:
+    name: "{{ ACR_PKG_NAME }}"
+    state: absent
+  when: pkg_list_result.results[0].yumstate == 'installed'

@@ -1,0 +1,7 @@
+# Installing pkg file
+- name: Installing {{ DEST_PKG_PATH }} in {{ DP_NAME }} deployment profiles
+  yum:
+    name: "{{ DEST_PKG_PATH }}"
+    state: latest
+  notify:
+    - configure database

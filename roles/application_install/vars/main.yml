@@ -1,0 +1,9 @@
+---
+# vars file for application_server
+DP_NAME : DP-SDE-JBOSS
+DATABASE_STATUS : mysql_status
+REMOTE_USER : root
+SRC_PKG_FILE_NAME : comcast_acr_rpm-1.0.1.rpm
+DEST_PKG_PATH : /cluster/comcast/acr_pkg/comcast_acr_rpm-1.0.1.rpm
+ACR_PKG_NAME : comcast_acr_rpm
+MYSQL_DATABASE_NAME : autocallbackredial
